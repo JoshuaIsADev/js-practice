@@ -143,32 +143,11 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-// let column = '';
-// let width = 0;
-// let widthInput = 4;
-// while (width < widthInput) {
-//   column = column + ' #';
-//   width = width + 1;
-// }
-
-// console.log(column);
-
-// let row = 0;
-// let rowInput = 8;
-// while (row < rowInput) {
-//   if (row % 2== 0) {
-
-//     console.log(`${column}\n\n`);
-//     }
-//     else {
-//       console.log(`${column}\n\n`);
-//     }
-//   row = row + 1;
-// }
-
+///Chapter 2 excercise////
+/*
 let counter = 0;
 let counter2 = 0;
-let column = 4;
+let column = 2;
 let row = 4;
 let startsWithHash = '';
 let startsWithSpace = '';
@@ -190,3 +169,37 @@ while (counter2 < row) {
   }
 }
 console.log(rowResult);
+*/
+
+///Chapter 3 excercise////
+function minimum(val1, val2) {
+  const min = Math.min(val1, val2);
+  return min;
+}
+
+console.log(minimum(12, 42));
+
+function isEven(param) {
+  if (param % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEven(50));
+
+function countBs(arg, char) {
+  // return arg.length;
+  let counter = 0;
+  let numberOf = 0;
+  while (counter < arg.length) {
+    if (arg[counter] == char) {
+      numberOf = numberOf + 1;
+    }
+    counter = counter + 1;
+  }
+  return numberOf;
+}
+
+console.log(countBs('houseBasketB', 'B'));
