@@ -172,6 +172,7 @@ console.log(rowResult);
 */
 
 ///Chapter 3 excercise////
+/*
 function minimum(val1, val2) {
   const min = Math.min(val1, val2);
   return min;
@@ -203,3 +204,60 @@ function countBs(arg, char) {
 }
 
 console.log(countBs('houseBasketB', 'B'));
+*/
+
+///chapter 4////
+let todoList = [];
+function remember(task) {
+  todoList.push(task);
+}
+function getTask() {
+  return todoList.shift();
+}
+
+function rememberUrgently(task) {
+  todoList.unshift(task);
+}
+
+remember('Brush teeth');
+console.log(todoList);
+remember('take our garbage');
+console.log(todoList);
+remember('write code');
+console.log(todoList);
+
+getTask();
+console.log(todoList);
+
+rememberUrgently('pay bills');
+console.log(todoList);
+
+console.log(['cat', 'dog', 'mouse', 'bird', 'dog'].indexOf('dog'));
+console.log(['cat', 'dog', 'mouse', 'bird', 'dog'].lastIndexOf('dog'));
+
+console.log([0, 1, 2, 3, 4].slice(2, 4));
+console.log([0, 1, 2, 3, 4].slice(2));
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let newArray = array1.concat(array2);
+console.log(newArray);
+console.log(array1);
+let joinedArray = newArray.join(' ');
+console.log(joinedArray);
+
+console.log(String(6).padStart(3, '00'));
+
+let sentence = 'Secretarybirds specialize in stomping';
+let words = sentence.split('c');
+console.log(words);
+
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+let numbers = [5, 3, 1, 7];
+console.log(max(...numbers));
