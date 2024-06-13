@@ -145,6 +145,64 @@ function getBook(id) {
 
 ///Chapter 2 excercise////
 /*
+
+const numberOfRows = 7;
+const character = '#';
+let rows = [];
+
+for (i = 0; i < numberOfRows; i++) {
+  rows.push(character.repeat(i + 1));
+}
+
+console.log(rows);
+let result = '';
+
+for (const row of rows) {
+  result = result + '\n' + row;
+}
+
+console.log(result);
+*/
+////////////////////////////////
+
+let numberArray = [];
+
+for (i = 1; i <= 100; i++) {
+  numberArray.push(i);
+}
+
+let result = [];
+
+for (const number of numberArray) {
+  if (number % 3 == 0 && number % 5 == 0) {
+    result.push('fizzbuzz');
+  } else if (number % 5 == 0) {
+    result.push('buzz');
+  } else if (number % 3 == 0) {
+    result.push('fizz');
+  } else {
+    result.push(number);
+  }
+}
+
+console.log(result);
+
+let patternRows = [];
+const size = 18;
+let xy = size * size;
+
+for (i = 1; i < xy; i++) {
+  if (i % (size + 1) == 0) {
+    patternRows.push('\n');
+  } else if (i % 2 == 0) {
+    patternRows.push('#');
+  } else {
+    patternRows.push(' ');
+  }
+}
+console.log(patternRows.join(''));
+
+/*
 let counter = 0;
 let counter2 = 0;
 let column = 2;
